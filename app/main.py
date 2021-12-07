@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-#savedposts= [{"title":"niggers","content":"niggers", "id": 2},{"title":"niggers","content":"niggers", "id": 3}]
+#savedposts= [{"title":"hello","content":"hello", "id": 2},{"title":"hello","content":"hello", "id": 3}]
 #def find_post(id):
     #for p in savedposts:
         #if p["id"]==id:
@@ -34,6 +34,6 @@ app.include_router(post.router)
 app.include_router(user.router)
 app.include_router(auth.router)
 app.include_router(vote.router)
-#@app.get("/")
-#async def root():
-    #return {"message": "Nigga on a horse"}
+@app.get("/")
+async def root():
+    return {"message": "Hometown"}
